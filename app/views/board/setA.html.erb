@@ -1,0 +1,36 @@
+<style>
+    .main_board{
+        width:100%;
+    }
+</style>
+
+<!--
+구상:
+대략 2페이지에서 3페이지로 분할해서 만들건데,
+여기 페이지에서는 '상설거리를 하는 사람들 대상 게시판','유용정보(화장실 정보)','막차 정보'를 만들 수 있도록 한다.(자기 상설거리 소개)
+modal과 연동을 시켜야하는 문제를 해결해야 한다.
+    =>modal에서 등록을 하든, 여기서 등록을 하든 서로 왔다갔다 db에 저장이 동일하게 이뤄져서 가능하게! 
+-->
+
+<div class="container">
+    <br><center><h1>정보전달 페이지</h1></center><br>
+    <%= image_tag "board", class: "main_board" %>
+</div>
+
+<div class="container">
+    <br>
+    <%= image_tag "restroom", class: "main_board" %>
+    <br>
+</div>
+
+<div class="container">
+    <br>
+    <%= image_tag "transport.png", class: "main_board" %>
+    <br>
+</div>
+
+<div class="container">
+    <br>
+    <%= image_tag "restraunt.png", class: "main_board" %>
+    <br>
+</div>

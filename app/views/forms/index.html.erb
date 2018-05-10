@@ -1,0 +1,563 @@
+<head>
+  <!--구글 폰트 임베딩-->
+  <link href="https://fonts.googleapis.com/css?family=Oleo+Script:700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+
+  <style>
+    .main_image{
+      width: 100%;
+      height: 50rem;
+      z-index: -1;
+    }
+    body{
+      margin:0;
+      padding:0;
+    }
+
+    /*navbar변경중...*/
+    
+        
+    #mainNav .navbar-brand {
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #F05F40;
+      font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    }
+    
+    #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
+      color: #f05f40;
+    }
+    
+    #mainNav .navbar-nav > li.nav-item > a.nav-link,
+    #mainNav .navbar-nav > li.nav-item > a.nav-link:focus {
+      font-size: .9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #212529;
+    }
+    
+    #mainNav .navbar-nav > li.nav-item > a.nav-link:hover,
+    #mainNav .navbar-nav > li.nav-item > a.nav-link:focus:hover {
+      color: #F05F40;
+    }
+    
+    #mainNav .navbar-nav > li.nav-item > a.nav-link.active,
+    #mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active {
+      color: #F05F40 !important;
+      background-color: transparent;
+    }
+    
+    #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover,
+    #mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active:hover {
+      background-color: transparent;
+    }
+    
+    @media (min-width: 992px) {
+      #mainNav {
+        border-color: transparent;
+        background-color: transparent;
+      }
+      #mainNav .navbar-brand {
+        color: rgba(255, 255, 255, 0.7);
+      }
+      #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
+        color: #fff;
+      }
+      #mainNav .navbar-nav > li.nav-item > a.nav-link {
+        padding: 0.5rem 1rem;
+      }
+      #mainNav .navbar-nav > li.nav-item > a.nav-link,
+      #mainNav .navbar-nav > li.nav-item > a.nav-link:focus {
+        color: rgba(255, 255, 255, 0.7);
+      }
+      #mainNav .navbar-nav > li.nav-item > a.nav-link:hover,
+      #mainNav .navbar-nav > li.nav-item > a.nav-link:focus:hover {
+        color: #fff;
+      }
+      #mainNav.navbar-shrink {
+        border-bottom: 1px solid rgba(33, 37, 41, 0.1);
+        background-color: #fff;
+      }
+      #mainNav.navbar-shrink .navbar-brand {
+        color: #F05F40;
+      }
+      #mainNav.navbar-shrink .navbar-brand:focus, #mainNav.navbar-shrink .navbar-brand:hover {
+        color: #f05f40;
+      }
+      #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link,
+      #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:focus {
+        color: #212529;
+      }
+      #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:hover,
+      #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:focus:hover {
+        color: #F05F40;
+      }
+    }
+        
+    
+    
+    /*.nav-pills .nav-link.active{*/
+    /*  float:left;*/
+    /*  width: 30rem;*/
+    /*  color:#666;*/
+    /*  vertical-align:middle;*/
+    /*  background-color: white;*/
+    /*}*/
+    
+    /*.nav-pills .nav-link.active:hover{*/
+    /*  background-color: black;*/
+    /*  color:white;*/
+    /*}*/
+    
+    /*.nav-item{*/
+    /*  text-align: center;*/
+    /*  width : 11rem;*/
+    /*}*/
+    
+    
+    /*.right-nav-item:hover{*/
+    /*  background-color:#F1E5E7;*/
+    /*}*/
+    
+    
+    .modal_position {
+      position: absolute;
+      top: 10%;
+      left: 15%;
+      z-index: 999;
+    }
+    .modal_position2 {
+      position: absolute;
+      top: 20%;
+      left: 30%;
+
+    }
+    .modal_position3 {
+      position: absolute;
+      top: 26%;
+      left: 44%;
+    }
+    .modal_position4 {
+      position: absolute;
+      top: 37%;
+      left: 58%;
+    }
+    .modal_position5 {
+      position: absolute;
+      top: 58%;
+      left: 30%;
+    }
+    .modal_position:hover,
+    .modal_position2:hover,
+    .modal_position3:hover{
+      background-color:transparent;
+    }
+    .guest{
+      width:49.5%;
+      margin: 0;
+      /*height:46rem;*/
+    }
+    
+    .homeImage{
+      width: 100%;
+    }
+    
+    .moreinfo{
+      padding-top:50px;
+    }
+    
+    .small_map{
+      text-align : center
+    
+    }
+    
+    .coming{
+      font-size: 20px;
+    }
+    
+    /* media query 반응형 이미지*/
+    #artist_carousel {
+      /*background-color: black;*/
+      /*background-image: linear-gradient(to bottom, #0c3483 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%);*/
+      /*background-image: linear-gradient(to bottom, #874da2 0%, #c43a30 80%);*/
+      /*background-image: linear-gradient(to bottom, #00cdac 0%, #8ddad5 100%);*/
+      background-image: linear-gradient(to bottom, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+    }
+    
+    /* 축제 라인업 text */
+    #lineup {
+      font-family: 'Oleo Script', cursive;
+      /*font-family: 'Lobster', cursive;*/
+      font-size: 60px;
+      color: white;
+      font-weight: bold;
+    }
+    
+    
+  </style>
+  <script>
+  $('#myModal').on('shown.bs.modal', function () {
+    $('#myInput').trigger('focus')
+    $('#myModal').modal('toggle')
+    $('#myModal').modal('show')
+    $('#myModal').modal('hide')
+    $('#myModal').modal('handleUpdate')
+  })
+  </script>
+</head>
+
+<!--navbar변경중...-->
+
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">국민대축제</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#carouselExampleSlidesOnly">상설거리</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#lineup">축제 라인업</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#howtocome">오시는 길</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="setA">More Info</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!--<br><br>-->
+<!--<ul class="nav nav-pills nav-fill">-->
+<!--  <li class="nav-item">-->
+<!--    <a class="nav-link" href="#homeImage">Home</a>-->
+<!--  </li>-->
+<!--  <li class="nav-item">-->
+<!--    <a class="nav-link" href="#carouselExampleSlidesOnly">상설거리</a>-->
+<!--  </li>-->
+<!--  <li class="nav-item">-->
+<!--    <a class="nav-link" href="#lineup">축제 라인업</a>-->
+<!--  </li>-->
+<!--  <li class="nav-item">-->
+<!--    <a class="nav-link" href="#howtocome">오시는길</a>-->
+<!--  </li>-->
+  <!--임시 네비바-->
+<!--  <li class="nav-item">-->
+<!--    <a class="nav-link" href="/board/setA">setA</a>-->
+<!--  </li>-->
+<!--</ul>-->
+<!--<br><br>-->
+
+<div id="homeImage">
+ <%= image_tag("home2.png", :alt => "rss feed", class:"homeImage") %>
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+      <%= image_tag "map.png", class: "main_image" %>
+
+        <a class= "modal_position"  class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+         <svg width="50px" viewBox="0 0 135 190" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+                <desc>Created with Sketch.</desc>
+                <defs>
+                    <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+                        <stop stop-color="#FF9B83" offset="0%"></stop>
+                        <stop stop-color="#F21919" offset="100%"></stop>
+                    </linearGradient>
+                    <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+                        <stop stop-color="#F5515F" offset="0%"></stop>
+                        <stop stop-color="#9F041B" offset="100%"></stop>
+                    </linearGradient>
+                    <linearGradient x1="50%" y1="-26.2350643%" x2="50%" y2="100%" id="linearGradient-3">
+                        <stop stop-color="#FE967E" offset="0%"></stop>
+                        <stop stop-color="#F53E37" offset="100%"></stop>
+                    </linearGradient>
+                </defs>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <path d="M67.5,189 C111.833333,132.484624 134,91.9846239 134,67.5 C134,30.7730641 104.226936,1 67.5,1 C30.7730641,1 1,30.7730641 1,67.5 C1,91.9846239 23.1666667,132.484624 67.5,189 Z" id="Oval" stroke="url(#linearGradient-2)" fill="url(#linearGradient-1)"></path>
+                    <circle id="Oval-2" stroke="#D0021B" fill="#FFFFFF" cx="68" cy="67" r="48"></circle>
+                    <g id="delivery-truck-silhouette" transform="translate(32.000000, 42.000000)" fill="url(#linearGradient-3)" fill-rule="nonzero">
+                        <path d="M67.2533552,0.755589608 C66.755363,0.252420422 66.1637817,0 65.4826088,0 L25.1856188,0 C24.5036188,0 23.9130024,0.252420422 23.4148723,0.755589608 C22.9166044,1.25945532 22.6672636,1.85637668 22.6672636,2.54565717 L22.6672636,10.1820715 L16.3706177,10.1820715 C15.6621538,10.1820715 14.8944214,10.3543916 14.0681098,10.6990318 C13.2416604,11.0442293 12.5793706,11.4677161 12.0811027,11.9715818 L4.28910157,19.8466253 C3.94823943,20.1912656 3.65341366,20.5887024 3.40365943,21.0397715 C3.15459437,21.4897263 2.97086237,21.8951034 2.8527391,22.2524204 C2.73489149,22.6107125 2.64915908,23.1006478 2.59719586,23.7243157 C2.54509482,24.347705 2.51173912,24.8050428 2.49864494,25.0968865 C2.4861021,25.3883123 2.4861021,25.8923173 2.49864494,26.6083444 C2.51187695,27.32465 2.51849296,27.7882566 2.51849296,28.0006965 L2.51849296,40.7275893 C1.83663084,40.7275893 1.24642797,40.9793132 0.747746514,41.4837362 C0.249340727,41.9864874 0,42.5836874 0,43.2731072 C0,43.6702654 0.0521010474,44.0220102 0.157130143,44.3265306 C0.262297072,44.6316083 0.4391374,44.8766455 0.688891627,45.0626175 C0.937956687,45.2485895 1.15449305,45.4005711 1.33794938,45.520234 C1.52195705,45.6393397 1.83015267,45.7186042 2.26294973,45.7585847 C2.69574679,45.7985652 2.99071039,45.8253117 3.14825403,45.838685 C3.30579768,45.8510831 3.64004381,45.8510831 4.15154378,45.838685 C4.66359508,45.8253117 4.95855868,45.8186251 5.03739942,45.8186251 L7.55575455,45.8186251 C7.55575455,48.6284043 8.53974761,51.0282092 10.5069067,53.0170648 C12.474755,55.0055025 14.8487985,56 17.6298642,56 C20.4106543,56 22.7849734,55.0055025 24.7524082,53.0170648 C26.7202565,51.0283485 27.7035604,48.6284043 27.7035604,45.8186251 L42.8152073,45.8186251 C42.8152073,48.6284043 43.7992004,51.0282092 45.7664973,53.0170648 C47.7335186,55.0055025 50.1079756,56 52.8890413,56 C55.6706584,56 58.0435992,55.0055025 60.0115853,53.0170648 C61.9794336,51.0283485 62.9628753,48.6284043 62.9628753,45.8186251 C63.0411647,45.8186251 63.3365418,45.8253117 63.8477661,45.838685 C64.3595418,45.8510831 64.6940636,45.8510831 64.8514694,45.838685 C65.0091509,45.8253117 65.3048036,45.7985652 65.737325,45.7585847 C66.1699843,45.7186042 66.4779042,45.639479 66.6619119,45.520234 C66.8459195,45.4009891 67.0617667,45.2485895 67.3109696,45.0626175 C67.5604482,44.8766455 67.7378398,44.6316083 67.8424554,44.3265306 C67.9485872,44.0218709 67.9999991,43.6701261 67.9999991,43.2731072 L67.9999991,2.54607509 C68.0005504,1.85665529 67.7514854,1.26043045 67.2533552,0.755589608 Z M21.1708058,49.3980637 C20.1744077,50.4052379 18.9934506,50.9100787 17.6293129,50.9100787 C16.2650373,50.9100787 15.0843559,50.4057951 14.0874065,49.3980637 C13.0904571,48.3911681 12.5921891,47.1974647 12.5921891,45.8189037 C12.5921891,44.4402034 13.0910084,43.2459427 14.0874065,42.2386292 C15.0842181,41.2317336 16.2648995,40.72745 17.6293129,40.72745 C18.9934506,40.72745 20.1742699,41.2313157 21.1708058,42.2386292 C22.1681687,43.2459427 22.6667123,44.4402034 22.6667123,45.8189037 C22.6667123,47.1974647 22.1681687,48.3911681 21.1708058,49.3980637 Z M22.6667123,25.4547607 L7.55520321,25.4547607 L7.55520321,24.2620325 C7.55520321,23.9172529 7.67305082,23.6255485 7.90915954,23.38678 L15.5828995,15.6313993 C15.8188704,15.3926308 16.1079072,15.2736644 16.4489071,15.2736644 L22.6667123,15.2736644 L22.6667123,25.4547607 Z M56.4303964,49.3980637 C55.4338605,50.4052379 54.2530412,50.9100787 52.8890413,50.9100787 C51.5244901,50.9100787 50.3432573,50.4057951 49.3467214,49.3980637 C48.3500477,48.3911681 47.8513662,47.1974647 47.8513662,45.8189037 C47.8513662,44.4402034 48.3499099,43.2459427 49.3467214,42.2386292 C50.3432573,41.2317336 51.5244901,40.72745 52.8890413,40.72745 C54.2530412,40.72745 55.4338605,41.2313157 56.4303964,42.2386292 C57.4270701,43.2465 57.9261651,44.4402034 57.9261651,45.8189037 C57.9261651,47.1974647 57.428035,48.3911681 56.4303964,49.3980637 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </svg>
+            </a>
+
+
+  <!-- Button trigger modal -->
+        <a class="modal_position2" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+          <svg width="50px" viewBox="0 0 135 189" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+              <desc>Created with Sketch.</desc>
+              <defs></defs>
+              <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <path d="M67.5,189 C111.833333,132.484624 134,91.9846239 134,67.5 C134,30.7730641 104.226936,1 67.5,1 C30.7730641,1 1,30.7730641 1,67.5 C1,91.9846239 23.1666667,132.484624 67.5,189 Z" id="Oval-Copy" stroke="#E14E9E" fill="#FF42A3"></path>
+                  <circle id="Oval-2-Copy" stroke="#E14E9E" fill="#FFFFFF" cx="68" cy="67" r="48"></circle>
+                  <g id="shopping-bag-(1)" transform="translate(42.000000, 38.000000)" fill="#FF42A3" fill-rule="nonzero">
+                      <path d="M50.9937354,57.1228636 L49.1666373,1.67089599 C49.1358838,0.739227433 48.3804874,0 47.459136,0 L3.53850424,0 C2.61703902,0 1.86152865,0.739227433 1.83088908,1.67089599 L0.000943436346,57.2137834 C-0.014433301,57.68198 0.158697371,58.1364637 0.48058374,58.473178 C0.802470108,58.8098924 1.24566185,58.9999136 1.70855859,58.9999136 L49.2890817,58.9999136 C49.2901068,59.0000288 49.2907902,59.0000288 49.2914736,58.9999136 C50.2349219,58.9999136 51,58.2260006 51,57.2714005 C51,57.2212736 50.997722,57.1718381 50.9937354,57.1228636 Z M25.4987632,25.6741811 C18.5021199,25.6741811 12.8101073,19.9154669 12.8101073,12.8370906 C12.8101073,11.8824904 13.5750716,11.1085775 14.5186337,11.1085775 C15.4621959,11.1085775 16.2271601,11.8824904 16.2271601,12.8370906 C16.2271601,18.0093779 20.3865106,22.217155 25.4987632,22.217155 C30.6111297,22.217155 34.7703663,18.0092627 34.7703663,12.8370906 C34.7703663,11.8824904 35.5353305,11.1085775 36.4788927,11.1085775 C37.4224548,11.1085775 38.187419,11.8824904 38.187419,12.8370906 C38.187419,19.9154669 32.4954065,25.6741811 25.4987632,25.6741811 Z" id="Shape"></path>
+                  </g>
+              </g>
+          </svg>
+        </a>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Button trigger modal -->
+  <a class="modal_position3"  class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+    <svg width="50px" viewBox="0 0 135 190" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+        <desc>Created with Sketch.</desc>
+        <defs>
+            <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+                <stop stop-color="#B4EC51" offset="0%"></stop>
+                <stop stop-color="#429321" offset="100%"></stop>
+            </linearGradient>
+        </defs>
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <path d="M67.5,189 C111.833333,132.484624 134,91.9846239 134,67.5 C134,30.7730641 104.226936,1 67.5,1 C30.7730641,1 1,30.7730641 1,67.5 C1,91.9846239 23.1666667,132.484624 67.5,189 Z" id="Oval-Copy-2" stroke="url(#linearGradient-1)" fill="#6FB734"></path>
+            <circle id="Oval-2-Copy-2" stroke="#5EAF00" fill="#FFFFFF" cx="68" cy="67" r="48"></circle>
+            <g id="gamepad" transform="translate(36.000000, 43.000000)" fill="#6FB734" fill-rule="nonzero">
+                <path d="M63.6248649,20.899248 C60.4365896,6.3675557 55.941099,2.78488487 53.2041039,1.34814071 C48.8201323,-0.952847003 43.7378393,0.38608617 42.0517781,1.25392105 C40.1373685,2.23456602 38.8450225,4.10153066 36.8989627,4.91222111 C34.6502084,5.8448056 31.5919323,6.09778327 29.2913483,4.97137246 C27.458613,4.07206061 25.8412687,2.15143724 23.6204473,1.30198153 C20.8053889,0.221624278 16.1168111,-1.29265041 11.4746465,2.01665665 C10.3771933,2.79967271 2.55057677,9.32586284 0.199756057,29.7134336 C-1.2504159,42.2842585 5.67937534,46.3284155 5.42500579,46.1456801 C7.2076106,47.4162723 11.1998849,49.563889 16.6089817,46.1993388 C20.2243218,43.9519042 23.1581214,39.5123837 23.1581214,39.5123837 C23.1581214,39.5123837 24.4653366,37.0433428 26.2015282,35.9942513 C27.4307864,35.2501061 29.2690445,35.8152128 29.2690445,35.8152128 L35.773789,35.8152128 C35.773789,35.8152128 37.83859,35.5567425 39.2888681,36.1937815 C40.6963442,36.8050474 41.4909968,38.3137238 41.4909968,38.3137238 C41.4909968,38.3137238 45.778531,43.8243063 49.8878472,46.6331506 C51.6369963,47.8262123 58.6671546,49.2002138 62.2972577,44.790269 C64.6683642,41.9037885 66.2857085,33.0303459 63.6248649,20.899248 Z M28.8754355,19.6121779 C28.8754355,20.7165125 27.9933732,21.6103318 26.9052663,21.6103318 L21.9771882,21.6103318 L21.9771882,26.6130576 C21.9771882,27.7192936 21.0951259,28.6148029 20.007019,28.6148029 L18.5289142,28.6148029 C17.4408073,28.6148029 16.5588512,27.7210893 16.5588512,26.6130576 L16.5588512,21.6103318 L11.6287552,21.6103318 C10.5406483,21.6103318 9.658586,20.7183082 9.658586,19.6121779 L9.658586,18.112691 C9.658586,17.006455 10.5406483,16.1108402 11.6287552,16.1108402 L16.5568333,16.1108402 L16.5568333,11.1136069 C16.5568333,10.0092722 17.4388955,9.11175606 18.5270024,9.11175606 L20.0051073,9.11175606 C21.0932142,9.11175606 21.9752764,10.007371 21.9752764,11.1136069 L21.9752764,16.1126358 L26.9033545,16.1126358 C27.9914614,16.1126358 28.8735237,17.006455 28.8735237,18.1144867 L28.8735237,19.6121779 L28.8754355,19.6121779 Z M42.7555162,26.6111563 C40.7148245,26.6111563 39.0604135,24.934321 39.0604135,22.8605379 C39.0604135,20.7903461 40.7148245,19.1117151 42.7555162,19.1117151 C44.7962078,19.1117151 46.4507251,20.7885504 46.4507251,22.8605379 C46.4525307,24.934321 44.7961016,26.6111563 42.7555162,26.6111563 Z M49.5311988,18.2806386 C47.5127047,18.2806386 45.8768801,16.6204925 45.8768801,14.5705811 C45.8768801,12.526268 47.5127047,10.8661219 49.5311988,10.8661219 C51.5495866,10.8661219 53.1854112,12.5263737 53.1854112,14.5705811 C53.1855174,16.6204925 51.5495866,18.2806386 49.5311988,18.2806386 Z" id="Shape"></path>
+            </g>
+        </g>
+    </svg>
+  </a>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Button trigger modal -->
+<button class="modal_position4" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Button trigger modal -->
+<button class="modal_position5" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<br><br>
+
+<!--축제 라인업 슬라이드-->
+<div id="artist_carousel">
+  <br><br>
+  <h1 style = "text-align: center;" id="lineup">Festival Line-Up</h1><br><br>
+  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <%= image_tag "dd1_1", class: "guest"%>
+        <%= image_tag "dd1_2", class: "guest"%>
+      </div>
+      <div class="carousel-item">
+        <%= image_tag "dd1_3", class: "guest"%>
+        <%= image_tag "dd1_4", class: "guest"%>
+      </div>
+      <div class="carousel-item">
+        <%= image_tag "dd1_5", class: "guest"%>
+        <%= image_tag "dd1_6", class: "guest"%>
+      </div>
+      <div class="carousel-item">
+        <%= image_tag "dd2_1", class: "guest"%>
+        <%= image_tag "dd2_2", class: "guest"%>
+      </div>
+      <div class="carousel-item">
+        <%= image_tag "dd2_3", class: "guest"%>
+        <%= image_tag "dd2_4", class: "guest"%>
+      </div>
+    </div>
+    
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  <br><br><hr>
+</div>
+
+<!--오시는 길 및 유용 정보-->
+<div class= "container moreinfo" id="howtocome">
+  <h1>막차 정보</h1>
+  <div class="row">
+    <div class="small_map col-lg-4">
+            <!--지도 넣을 공간 grid로 먹인다.-->
+            <!--아래는 지도 못 넣을 경우 이미지로 넣는다.-->
+            <!--
+        	* Daum 지도 - 약도서비스
+        	* 한 페이지 내에 약도를 2개 이상 넣을 경우에는
+        	* 약도의 수 만큼 소스를 새로 생성, 삽입해야 합니다.
+        -->
+      <div style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 12px; line-height: normal; font-family: dotum, sans-serif; width: 300px; height: 333px; color: rgb(51, 51, 51); position: relative;">
+        <div style="height: 300px;">
+          <a target="_blank" href="http://map.daum.net/?urlX=499331&amp;urlY=1141994&amp;itemId=11325169&amp;q=%EA%B5%AD%EB%AF%BC%EB%8C%80%ED%95%99%EA%B5%90&amp;srcid=11325169&amp;map_type=TYPE_MAP&amp;from=roughmap">
+            <img class="map small_map" src="//t1.daumcdn.net/roughmap/imgmap/dd26203054c4dcbc49a494d4df358999554e3f60c7575fac2a227838603ea227" width="298" height="298" style="border: 1px solid rgb(204, 204, 204);">
+          </a>
+        </div>
+        <div>
+          <span style="border-left:0.996094px solid rgb(219, 219, 219);border-right:0.996094px solid rgb(219, 219, 219);border-bottom:0.996094px solid rgb(219, 219, 219);box-sizing:border-box;box-sizing:border-box;background-color:rgb(255, 255, 255);position:absolute;left:0px;top:300px;width:298px;height:32px">
+            
+          </span>
+          <span style="position:absolute;left:11.9921875px;top:308.984375px">
+          <img src="//t1.daumcdn.net/localimg/localimages/07/2013/map/test/ico_road.gif">
+          </span>
+          <a href="http://map.daum.net/?from=roughmap&amp;srcid=11325169&amp;confirmid=11325169&amp;q=%EA%B5%AD%EB%AF%BC%EB%8C%80%ED%95%99%EA%B5%90&amp;rv=on" target="_blank" style="text-decoration: none;color: #333;font:normal normal 400 12.5px gulim, sans-serif;line-height:14px;position:absolute;left:26.97265625px;top:310.9765625px">
+            로드뷰
+          </a>
+          <span style="display:none">
+            &nbsp;
+          </span>
+          <span style="position:absolute;left:75.390625px;top:308.984375px">
+            <img src="//t1.daumcdn.net/localimg/localimages/07/2013/map/test/ico_street.gif">
+          </span>
+          <a href="http://map.daum.net/?from=roughmap&amp;eName=%EA%B5%AD%EB%AF%BC%EB%8C%80%ED%95%99%EA%B5%90&amp;eX=499331&amp;eY=1141994" target="_blank" style="text-decoration: none;color: #333;font:normal normal 400 12.5px gulim, sans-serif;line-height:14px;position:absolute;left:89.375px;top:310.9765625px">
+            길찾기
+          </a>
+        </div>
+      </div>  
+       
+    </div>
+    
+    <div class="small_map col-lg-8">
+      <h4 >평일 막차 시간</h4>
+      <hr>
+      <div class="row">
+        <div class= "col-6">  
+          <p>110A <br>평일 22:40</p>
+          <p>110B <br>평일 22:45</p>
+          <p>153 <br>평일 22:20</p>
+          <p>171 <br>평일 23:00</p>
+          <p>1020 <br>평일 23:20</p>
+        </div>
+        <div class= "col-6">  
+          
+          <p>1166 <br>평일 23:30</p>
+          <p>1213 <br>평일 23:40</p>
+          <p>1711 <br>평일 23:00</p>
+          <p>7211 <br>평일 23:00</p>
+          <p>이 외 버스 시간<br><a href="http://topis.seoul.go.kr/map/openBusMap.do">서울시 막차 정보 조회</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <p class="coming">자세한 정보 <a href="https://www.kookmin.ac.kr/site/about/guide/map/trans.htm">국민대 오는 길</a></p>
+  
+</div>
