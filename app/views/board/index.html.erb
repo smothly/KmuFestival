@@ -1,0 +1,74 @@
+ <style>
+    .container{
+        padding-left:5%;
+        padding-right:5%;
+        text-align: center;
+    }
+    .card{
+        display: inline-block;
+        margin: 1%;
+        text-align: center;
+        
+    }
+    
+    
+    .card_model{
+        /*width : 100px;*/
+        
+        /*말줄임표*/
+        /*text-overflow:ellipsis;*/
+        /*white-space:nowrap;*/
+        /*word-wrap:normal;*/
+        /*width:100px;*/
+        /*overflow:hidden;*/
+    }
+
+</style>
+    
+    
+
+<div class="container"style="margin-top : 100px">
+    <a href = "/">[홈버튼]</a><br>
+    <a href = "/board/index">[게시판 홈버튼]</a><br>
+    <a href = "/board/new">[등록버튼]</a><br>
+    <hr>
+    
+    <div class="">
+        작성예시
+        방명록, 상설거리 소개, ....
+    </div>
+    
+    <hr>
+    <!--최신순으로 위부터 나열-->
+    <% @list.reverse.each do |p| %>
+        
+       
+        <div class="card col-lg-3 col-sm-12" style="">
+          <div class="card-header bg-transparent border-success">
+               번호 : <%= p.id %><br>
+               제목 : <%= p.title %></a>
+          </div>
+          <div class="card-body text-success">
+            <p class="card-text">내용 : <%= p.content%></p>
+          </div>
+          <div class="card-footer bg-transparent border-success">작성자 : <%= p.editor%>
+
+          </div>
+            <div class="card-footer bg-transparent border-success">
+            <a href="/board/edit/<%=p.id %>">[수정]</a>
+            <a href="/board/destroy/<%=p.id %>">[삭제]</a>
+          </div>
+        </div>
+            
+     
+    
+        <% p.password%>
+        <!--비밀번호는 나중에 활용. 굳이 표시는 x-->
+    
+      
+            
+        
+        
+    <% end %>
+
+</div>

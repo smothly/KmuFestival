@@ -1,5 +1,17 @@
 Rails.application.routes.draw do
 
+  get 'board/index'
+      
+  get 'board/new'
+
+  post 'board/create'
+
+  get 'board/edit/:edit_id' => 'board#edit'
+
+  post 'board/update/:update_id'=> 'board#update'
+
+  get 'board/destroy/:destroy_id' =>'board#destroy'
+
   resources :forms
   root 'forms#index'
   get 'forms/new' => 'forms#new'
