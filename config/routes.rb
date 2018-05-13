@@ -7,11 +7,15 @@ Rails.application.routes.draw do
   post 'board/create'
 
   get 'board/edit/:edit_id' => 'board#edit'
+  
+  get 'board/edit_temp/:edit_temp_id' => 'board#edit_temp'
 
   post 'board/update/:update_id'=> 'board#update'
 
   get 'board/destroy/:destroy_id' =>'board#destroy'
 
+  get 'board/modal/:modal_id' => 'board#modal'
+  
   resources :forms
   root 'forms#index'
   get 'forms/new' => 'forms#new'

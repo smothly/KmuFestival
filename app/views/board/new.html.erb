@@ -1,39 +1,26 @@
 <div class="container">
     <h1>새로운 글 작성 폼</h1>
     <form action="/board/create" method="POST">
-      <div class="form-group">
+    <div class="form-group">
         <label for="exampleInputEmail1">title</label>
         <input type="text" name="title" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="제목">
-        
-      </div>
-      <div class="form-group">
+    
+    </div>
+    <div class="form-group">
         <label for="exampleInputPassword1">editor</label>
         <input type="text" name="editor" class="form-control" id="exampleInputPassword1" placeholder="editor">
-      </div>
-      <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-      </div>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" name = "password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    </div>
       
-      <div class="form-group">
-          <label for="comment">content:</label>
-          <textarea class="form-control" name="content" rows="10" id="comment"></textarea>
+        <div class="form-group">
+            <label for="comment">content:</label>
+            <textarea class="form-control" name="content" rows="10" id="comment"></textarea>
         </div>
-      
-      <button type="submit" class="btn btn-primary">Submit</button>
+    
+        <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </div>
 
-<!--newline만들기...-->
-<script>
-$('#dialogDiv').on('submit', '#insertMacroForm', function(){
-    $.ajax({
-        url: 'index.php',
-        data: 'request=loadMacro2&id='+$('#macroSelection').val(),
-        success: function(msg){
-            $('#comment').val(msg);
-        }
-    });
-    return false;
-});
-</script>

@@ -13,15 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20180510124024) do
 
-  create_table "forms", force: :cascade do |t|
-    t.string   "name"
-    t.string   "category"
-    t.string   "position"
-    t.text     "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
   create_table "tables", force: :cascade do |t|
     t.string   "title"
     t.string   "editor"

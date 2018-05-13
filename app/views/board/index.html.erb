@@ -1,17 +1,36 @@
  <style>
-    .container{
-        padding-left:5%;
-        padding-right:5%;
+    
+    .card_container{
+        display: block;
         text-align: center;
+        column-count: 3;
+        column-gap: 1.25rem;
+    }
+    
+    .card_column{
+      position: relative;
+      display:block;
     }
     .card{
         display: inline-block;
-        margin: 1%;
+        margin-bottom: 3%;
         text-align: center;
-        
+        width: 100%;
+     }
+    /*그냥 화면의 크기에 따라 css는 여기에 추가*/
+    @media screen and (min-width:240px) and (max-width:900px)
+    {
+      .card_container{
+        column-count: 1;
+      }
     }
-    
-    
+    /*모바일 창의 css는 여기에다가 추가*/
+    @media screen and (min-device-width:240px) and (max-device-width:900px)
+    {
+      .card_container{
+        column-count: 1;
+      }
+    }
     .card_model{
         /*width : 100px;*/
         
@@ -22,53 +41,216 @@
         /*width:100px;*/
         /*overflow:hidden;*/
     }
+    div .board_navybar{
+      float: right;
+    }
+    .search{
+      display: block;
+      vertical-align: middle;
+      border: 1px solid black;
+    }
+    .search_image{
+      position:absolute;
+      width:17%;
+      height:50%;
+    }
+    
+    #navi {
+      background-color:#dddddd;
+      z-index: -1;
+      width: 100%;
+      
+     
+    }
 
 </style>
-    
-    
 
-<div class="container"style="margin-top : 100px">
-    <a href = "/">[홈버튼]</a><br>
-    <a href = "/board/index">[게시판 홈버튼]</a><br>
-    <a href = "/board/new">[등록버튼]</a><br>
-    <hr>
-    
-    <div class="">
-        작성예시
-        방명록, 상설거리 소개, ....
+<div class = "container">
+  <!--계시판 내비바-->
+  <div id="navi">
+    <div class = "board_navybar" style = "top: 0px; right: 0; position:fixed">
+      <a href = "/">[홈버튼]</a>
+      <a href = "/board/index">[게시판 홈버튼]</a>
+      <a href = "/board/new">[등록버튼]</a>
+      <br>
+      <!--검색창-->
+      <div class = "search">
+        <input type = "text" placeholder = "검색어를 입력해주세요"></input>
+        <%= image_tag "search_icon.png", class:"search_image"%>
+      </div>
     </div>
-    
-    <hr>
-    <!--최신순으로 위부터 나열-->
-    <% @list.reverse.each do |p| %>
+  </div>
+  
+  
         
-       
-        <div class="card col-lg-3 col-sm-12" style="">
-          <div class="card-header bg-transparent border-success">
-               번호 : <%= p.id %><br>
-               제목 : <%= p.title %></a>
-          </div>
-          <div class="card-body text-success">
-            <p class="card-text">내용 : <%= p.content%></p>
-          </div>
-          <div class="card-footer bg-transparent border-success">작성자 : <%= p.editor%>
-
-          </div>
-            <div class="card-footer bg-transparent border-success">
-            <a href="/board/edit/<%=p.id %>">[수정]</a>
-            <a href="/board/destroy/<%=p.id %>">[삭제]</a>
-          </div>
-        </div>
-            
-     
+        
+        
+  <!--제목-->
+  <div class="name_container" style="margin-top : 100px">
     
-        <% p.password%>
-        <!--비밀번호는 나중에 활용. 굳이 표시는 x-->
-    
+      <hr>
       
-            
+      <div class="contet_title">
+        제목을 지어주세요용오ㅗ오오오오
+      </div>
+      
+      <hr>
+  </div>
+  
+  
+  <div class = "card_container">
+      <!--최신순으로 위부터 나열-->
+          <% @list_show.each do |p| %>
+              <div class = "card_column">
+                  <div class= "card">
+                    <a data-toggle="modal" href="#contentModal<%= p.id %>">
+                        <div class="card-header bg-transparent border-success">
+                                     
+                             <!--제목-->
+                             <strong><%= p.title %></strong>
+                             <br>
+                            <!--한국 시간으로 작성시간 표시-->
+                            <span style="font-size : 10px"><%= p.created_at.in_time_zone("Seoul").to_s.chomp(" +0900") %></span>
+                        
+                        </div>
+                        
+                        <!--내용-->
+                        <div class="card-body text-success">
+                            <!--simple_format으로 new line 만들어준다.-->
+                          <p class="card-text"><%= simple_format(p.content) %></p>
+                        </div>
+                    </a>    
+                        <div class="card-footer bg-transparent border-success">작성자 : <%= p.editor%>
+                                    
+                          <!--modal destroy demo-->
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal<%=p.id%>">
+                              수정
+                            </button>
+                            
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#destroyModal<%=p.id%>">
+                              삭제
+                            </button>
+                        </div>
+                    
+                          
+          
+          
+          <!-- destroy Modal -->
+  
+          <div class="modal fade" id="destroyModal<%=p.id%>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <form action="/board/destroy/<%=p.id %>" method="GET">
+                  <div class="modal-body">
+                      비밀번호를 입력하시오.  <%= p.password %>
+                      
+                          <input type="text" name="destroy_passwd" class="form-control" autocomplete="off">
+                      
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                          Close
+                      </button>
+                      
+                      <button type="submit" class="btn btn-primary">
+                          삭제
+                      </button>
+                      
+                      
+                  </div>
+              </form>
+              </div>
+            </div>
+          </div>
+  
+                      
+          <!--여기까지!-->
+          
+          <!--editModal-->
+          <div class="modal fade" id="editModal<%=p.id%>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                
+                <div class="modal-body">
+                  비밀번호를 입력하시오.<%= p.id %>  <%= p.password %>
+                  <form action="/board/edit/<%=p.id %>" method="GET">
+                      <input type="text" name="edit_passwd" class="form-control" autocomplete="off">
+                      
+                
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      
+                      <button type="submit" class="btn btn-primary">
+                          수정
+                      </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 콘텐트Modal -->
+          <div class="modal fade" id="contentModal<%= p.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel"><%= p.title %></h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <%= simple_format(p.content) %>
+                </div>
+                
+                <!--댓글창-->
+                <!-- 라이브리 시티 설치 코드 -->
         
-        
-    <% end %>
+                  <div id="lv-container" data-id="city" data-uid="MTAyMC8zNjQ0Ny8xMjk4Mg==">
+                  	<script type="text/javascript">
+                     (function(d, s) {
+                         var j, e = d.getElementsByTagName(s)[0];
+                  
+                         if (typeof LivereTower === 'function') { return; }
+                  
+                         j = d.createElement(s);
+                         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                         j.async = true;
+                  
+                         e.parentNode.insertBefore(j, e);
+                     })(document, 'script');
+                  	</script>
+                    <noscript> 라이브리 댓글 작성을 위해 JavaScript를 활성화 해주세요</noscript>
+                  </div>
 
+                  <!-- 시티 설치 코드 끝 -->
+                  
+                  
+                <div class="modal-footer">
+                  <p style = "position: absolute; left:3%;">작성자 : <%= p.editor %></p>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>  
+        
+        </div>
+      </div>
+          
+          
+      <% end %>
+        
+      </div>
+    </div>
+  </div>
 </div>
+
+
+
+
+
+
+
+

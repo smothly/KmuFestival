@@ -52,9 +52,9 @@
   
   <%= yield %>
   <!--footer-->
-  <footer class="footer-distributed" >
-      <p style="margin-bottom:0">
-        
+  <footer class="foot footer-distributed" >
+    <div class="row">
+      <div class="col-lg-4">  
         <p>
           <%= image_tag "kmulion.png", class: "likelionlogo" %>
           <!--<img src="assets/kmulion.png" align="left" width="105" height="105" hspace="15">-->
@@ -68,87 +68,27 @@
           ALL RIGHTS RESERVED.
           <br>
         </p>
+      </div>
+      <div class="col-lg-8">
+        CONNECT WITH US
+        <br>
+        <!--facebook icon-->
+        <a href="https://www.facebook.com/LikeLionKookmin/"><%= image_tag "fb_icon.png", class: "fb_icon" %></a>
+        <!--likelion icon-->
+        
+        
+      </div>
+    </div>
   </footer>
 </body>
 </html>
 
 <style>
-  /*#mainNav{*/
-  /*    background-color : red ;*/
-  /*  }*/
-  /*  #mainNav .navbar-brand {*/
-  /*    font-weight: 700;*/
-  /*    text-transform: uppercase;*/
-  /*    color: #F05F40;*/
-  /*    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;*/
-  /*  }*/
-    
-  /*  #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {*/
-  /*    color: #f05f40;*/
-  /*  }*/
-    
-  /*  #mainNav .navbar-nav > li.nav-item > a.nav-link,*/
-  /*  #mainNav .navbar-nav > li.nav-item > a.nav-link:focus {*/
-  /*    font-size: .9rem;*/
-  /*    font-weight: 700;*/
-  /*    text-transform: uppercase;*/
-  /*    color: #212529;*/
-  /*  }*/
-    
-  /*  #mainNav .navbar-nav > li.nav-item > a.nav-link:hover,*/
-  /*  #mainNav .navbar-nav > li.nav-item > a.nav-link:focus:hover {*/
-  /*    color: #F05F40;*/
-  /*  }*/
-    
-  /*  #mainNav .navbar-nav > li.nav-item > a.nav-link.active,*/
-  /*  #mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active {*/
-  /*    color: #F05F40 !important;*/
-  /*    background-color: transparent;*/
-  /*  }*/
-    
-  /*  #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover,*/
-  /*  #mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active:hover {*/
-  /*    background-color: transparent;*/
-  /*  }*/
-    
-  /*  @media (min-width: 992px) {*/
-  /*    #mainNav {*/
-  /*      border-color: transparent;*/
-  /*      background-color: transparent;*/
-  /*    }*/
-  /*    #mainNav .navbar-brand {*/
-  /*      color: rgba(255, 255, 255, 0.7);*/
-  /*    }*/
-  /*    #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {*/
-  /*      color: #fff;*/
-  /*    }*/
-  /*    #mainNav .navbar-nav > li.nav-item > a.nav-link {*/
-  /*      padding: 0.5rem 1rem;*/
-  /*    }*/
-  /*    #mainNav .navbar-nav > li.nav-item > a.nav-link,*/
-  /*    #mainNav .navbar-nav > li.nav-item > a.nav-link:focus {*/
-  /*      color: rgba(255, 255, 255, 0.7);*/
-  /*    }*/
-  /*    #mainNav .navbar-nav > li.nav-item > a.nav-link:hover,*/
-  /*    #mainNav .navbar-nav > li.nav-item > a.nav-link:focus:hover {*/
-  /*      color: #fff;*/
-  /*    }*/
-  /*    #mainNav.navbar-shrink {*/
-  /*      border-bottom: 1px solid rgba(33, 37, 41, 0.1);*/
-  /*      background-color: #fff;*/
-  /*    }*/
-  /*    #mainNav.navbar-shrink .navbar-brand {*/
-  /*      color: #F05F40;*/
-  /*    }*/
-  /*    #mainNav.navbar-shrink .navbar-brand:focus, #mainNav.navbar-shrink .navbar-brand:hover {*/
-  /*      color: #f05f40;*/
-  /*    }*/
-  /*    #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link,*/
-  /*    #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:focus {*/
-  /*      color: #212529;*/
-  /*    }*/
-  /*    #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:hover,*/
-  /*    #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:focus:hover {*/
-  /*      color: #F05F40;*/
-  /*    }*/
+  .foot p{
+    margin-bottom: 0;
+  }
+  
+  .fb_icon{
+    height: 50px;
+  }
 </style>
