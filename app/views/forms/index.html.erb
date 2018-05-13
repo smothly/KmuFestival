@@ -122,6 +122,10 @@
     }
   }
   
+    #moresize{
+      height :50px;
+      
+    }
     .guest{
       width:49.5%;
       margin: 0;
@@ -171,7 +175,8 @@
       font-family: 'Godo';
       font-style: normal;
       font-weight: 400;
-      src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoM.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoM.woff') format('woff'); } @font-face { font-family: 'Godo'; font-style: normal; font-weight: 700; src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoB.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoB.woff') format('woff'); } .godo * { font-family: 'Godo', sans-serif; }
+      src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoM.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoM.woff') format('woff'); } @font-face { font-family: 'Godo'; font-style: normal; font-weight: 700; src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoB.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoB.woff') format('woff'); } .godo * { font-family: 'Godo', sans-serif; 
+      }
     
     .lastbus{
       font-family: 'Godo';
@@ -190,7 +195,7 @@
 
   <!--네비바-->
   
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav moresize">
     <div class="container">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">국민대축제</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -229,7 +234,7 @@
   <div id="homeImage">
     <div>
       <br><br>
-      <h1 style = "text-align: center;" id="lineup"><br>Kookmin Univ. Festival</h1><br><br>
+      <!--<h1 style = "text-align: center;" id="lineup"><br>Kookmin Univ. Festival</h1><br><br>-->
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active" id="homeCarousel1">
@@ -301,6 +306,81 @@
     </div>
     <br><br><hr>
   </div>
+
+  <!--자바스크립트-->
+   <!-- Portfolio Grid -->
+    <section class="bg-light" id="portfolio">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">축 제 일 정</h2>
+            <h3 class="section-subheading text-muted">날짜별 축제 일정입니다</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="board.jpg" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>5 / 14</h4>
+              <p class="text-muted">오월십사일</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="board.jpg" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>5 / 15</h4>
+              <p class="text-muted">오월십오일</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/05-thumbnail.jpg" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>5 / 16</h4>
+              <p class="text-muted">오월십육일</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/06-thumbnail.jpg" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>5 / 17</h4>
+              <p class="text-muted">오월십칠일</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+  
+  <!--여기까지-->
+
 
   <!--막차정보 안내-->
   <div class="infobox">
