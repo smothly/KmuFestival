@@ -1,5 +1,17 @@
+<style>
+.back{
+    background-color: #212529;
+}
+
+.title_color{
+    color:white;
+}
+
+</style>
+
+<div class="back">
 <div class="container">
-    <h1>수정중...</h1>
+    <h1 class="title_color">수정중...</h1>
 
     
     <form action="/board/update/<%= @show_data.id %>" method="POST">
@@ -23,7 +35,7 @@
 </div>
 
 <br><br><br><br>
-
+</div>
 <script>
 $('#dialogDiv').on('submit', '#insertMacroForm', function(){
     $.ajax({
