@@ -5,16 +5,27 @@ class BoardController < ApplicationController
     # 최신순으로 카드 보여주기
     @list_show = @list.reverse
     
-    
+    def format_linebreaks(text)
+    safe_text = h(text)
+    paragraphs = split_paragraphs(safe_text).map(&:html_safe)
+  
+    html = ''.html_safe
+    paragraphs.each do |paragraph|
+      html << content_tag(:p, paragraph)
+    end
+    html
+  end
 
     
     
   end
 
   def new
+    
   end
 
   def create
+    
     new_post=Table.new(title: params[:title], editor: params[:editor], content: params[:content], password: params[:password])
     
     new_post.save  
@@ -77,8 +88,7 @@ class BoardController < ApplicationController
     
     dest_passwd = params[:destroy_passwd].to_i
     
-    
-    if dest_passwd == destroy_post.password
+    if  dest_passwd == destroy_post.password
 
       destroy_post.destroy
       
@@ -86,7 +96,7 @@ class BoardController < ApplicationController
       
       destroy_post.destroy
     
-    else  dest_passwd != destroy_post.password
+    elsif dest_passwd != destroy_post.password
     
     end
     
