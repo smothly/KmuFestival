@@ -5,16 +5,7 @@ class BoardController < ApplicationController
     # 최신순으로 카드 보여주기
     @list_show = @list.reverse
     
-    def format_linebreaks(text)
-    safe_text = h(text)
-    paragraphs = split_paragraphs(safe_text).map(&:html_safe)
-  
-    html = ''.html_safe
-    paragraphs.each do |paragraph|
-      html << content_tag(:p, paragraph)
-    end
-    html
-  end
+    
 
     
     
@@ -104,7 +95,4 @@ class BoardController < ApplicationController
     redirect_to "/board/index"
     
   end
-  
-  
-  
 end
