@@ -1,0 +1,209 @@
+/* Small Devices, Tablets */
+    @media only screen and (max-width : 990px) {
+        #mainButton {
+            width:70% !important;
+            font-size:26px !important;
+            height:100px !important;
+        }
+        .gMap {
+            background-color: #fff!important;
+            color: #212529!important;
+        }
+        .gMap:hover {
+            background-color: #0E0D31!important;
+            color: #fff!important;
+        }
+        .button_back {
+            padding-top:0px !important;
+            padding-bottom: 80px!important;
+        }
+        .guest {
+            width:49.4% !important;
+        }
+        #lineup {
+            font-size:42px !important;
+        }
+        .section-heading {
+            font-size: 42px !important;
+        }
+        .section-subheading {
+            font-size: 1.1rem !important;
+        }
+        footer .likelionlogo {
+            width: 100% !important;
+            height: 130px !important;
+        }
+        .footer-distributed {
+            padding: 10px 35px !important;
+        }
+        .footer-right {
+            text-align: center !important;
+            margin-top: 20px;
+        }
+        .card-text2 {
+            font-size: 16px !important;
+        }
+        #btnc {
+            margin-right:0px !important;
+            font-size: 32px;
+            line-height: 56px;
+            height: 74px;
+            width: 70%;
+        }
+        .board-btn-section {
+            margin-bottom: 12px;
+        }
+        .name_container {
+            margin-top: 26px !important;
+        }
+        .title_color {
+            font-size: 32px;
+        }
+        .board_cancel {
+            color: rgba(400,400,400,0.8) !important;
+            font-size: 16px;
+            margin:0px 12px;
+        }
+    }
+    
+/* Extra Small Devices, Phones */ 
+    @media only screen and (max-width : 480px) {
+        #mainButton {
+            width:70% !important;
+            font-size:26px !important;
+            height:100px !important;
+        }
+        .gMap {
+            background-color: #fff!important;
+            color: #212529!important;
+        }
+        .gMap:hover {
+            background-color: #0E0D31!important;
+            color: #fff!important;
+        }
+        .button_back {
+            padding-top:0px !important;
+            padding-bottom: 80px!important;
+        }
+        .guest {
+            width:49.4% !important;
+        }
+        #lineup {
+            font-size:42px !important;
+        }
+        .section-heading {
+            font-size: 42px !important;
+        }
+        .section-subheading {
+            font-size: 1.1rem !important;
+        }
+        footer .likelionlogo {
+            width: 100% !important;
+            height: 130px !important;
+        }
+        .footer-distributed {
+            padding: 10px 35px !important;
+        }
+        .footer-right {
+            text-align: center !important;
+            margin-top:20px;
+        }
+        .modal-title {
+            font-size: 32px;
+        }
+        .card-text2 {
+            font-size: 16px !important;
+        }
+        #btnc {
+            margin-right:0px !important;
+            font-size: 32px;
+            line-height: 56px;
+            height: 74px;
+            width: 70%;
+        }
+        .board-btn-section {
+            margin-bottom: 12px;
+        }
+        .name_container {
+            margin-top: 26px !important;
+        }
+        .title_color {
+            font-size: 32px;
+        }
+        .board_cancel {
+            color: rgba(400,400,400,0.8) !important;
+            font-size: 16px;
+            margin:0px 12px;
+        }
+    }
+    
+/* Custom, iPhone Retina */ 
+    @media only screen and (max-width : 320px) {
+        #mainButton {
+            width:70% !important;
+            font-size:26px !important;
+            height:100px !important;
+        }
+        .gMap {
+            background-color: #fff!important;
+            color: #212529!important;
+        }
+        .gMap:hover {
+            background-color: #0E0D31!important;
+            color: #fff!important;
+        }
+        .button_back {
+            padding-top:0px !important;
+            padding-bottom: 80px!important;
+        }
+        .guest {
+            width:49.4% !important;
+        }
+        #lineup {
+            font-size:42px !important;
+        }
+        .section-heading {
+            font-size: 42px !important;
+        }
+        .section-subheading {
+            font-size: 1.1rem !important;
+        }
+        footer .likelionlogo {
+            width: 100% !important;
+            height: 130px !important;
+        }
+        .footer-distributed {
+            padding: 10px 35px !important;
+        }
+        .footer-right {
+            text-align: center !important;
+            margin-top:20px;
+        }
+        .modal-title {
+            font-size: 32px;
+        }
+        .card-text2 {
+            font-size: 16px !important;
+        }
+        #btnc {
+            margin-right:0px !important;
+            font-size: 32px;
+            line-height: 56px;
+            height: 74px;
+            width: 70%;
+        }
+        .board-btn-section {
+            margin-bottom: 12px;
+        }
+        .name_container {
+            margin-top: 26px !important;
+        }
+        .title_color {
+            font-size: 32px;
+        }
+        .board_cancel {
+            color: rgba(400,400,400,0.8) !important;
+            font-size: 16px;
+            margin:0px 12px;
+        }
+    }

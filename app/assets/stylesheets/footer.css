@@ -1,5 +1,6 @@
 /* 딴건 필요없고 맨 윗줄 얘만 유효함*/
 .footer-distributed{
+	font-weight: 400 !important;
 	background-color: #ffffff;
 	/*box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);*/
 	/*box-sizing: border-box;*/

@@ -11,7 +11,9 @@
 <link rel="stylesheet" media="all" href="/assets/forms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" data-turbolinks-track="true">
 <link rel="stylesheet" media="all" href="/assets/scaffolds.self-e140603c74918fee9c56c7d06e9447ebe64b96b519116b3f054b3b6c4c0923cf.css?body=1" data-turbolinks-track="true">
 <link rel="stylesheet" media="all" href="/assets/application.self-da29d8caba0d41f28c7f0fd6051adba4c3d2b67af8fef0806adb626c1e8c379f.css?body=1" data-turbolinks-track="true">
-  <script src="/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" data-turbolinks-track="true"></script>
+<link rel="stylesheet" media="all" href="/assets/mobile.self-651a1305851b73f6ef6cb89fbd0a7c1c84c58e777d7ed94ccbd151a10d073536.css?body=1" data-turbolinks-track="true">
+
+<script src="/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" data-turbolinks-track="true"></script>
 <script src="/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" data-turbolinks-track="true"></script>
 <script src="/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" data-turbolinks-track="true"></script>
 <script src="/assets/board.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" data-turbolinks-track="true"></script>
@@ -20,7 +22,11 @@
 <script src="/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" data-turbolinks-track="true"></script>
   <meta name="csrf-param" content="authenticity_token">
 <meta name="csrf-token" content="iA3L4O6g0uXdOshcp43fUzVuV2ZatvUj6GPOpK6RgVsTPox9+pfL3QkqDZylSxhYb64szCabyuJw5J7sGEfCYA==">
-  
+ 
+ <!--구글 폰트 임베딩-->
+  <link href="https://fonts.googleapis.com/css?family=Oleo+Script:700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet"> 
   
   
 </head>
@@ -29,10 +35,7 @@
   
 
   
-  <!--구글 폰트 임베딩-->
-  <link href="https://fonts.googleapis.com/css?family=Oleo+Script:700" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+  
 
   
   
@@ -446,6 +449,10 @@
   cursor: pointer;
 }
 
+.portfolio-modat .modal-content .card-text2 {
+  text-align: left;
+}
+
 .portfolio-modal .close-modal {
   position: absolute;
   top: 25px;
@@ -616,18 +623,18 @@
 </div>
 
       <div class="row button_back">
-        <div class="col-sm-2"></div>
-        <div class="col-sm-4">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-4 col-sm-12">
           <center>
-            <button id="mainButton" type="button" class="btn btn-outline-light btn-lg" width="100%" height="100%" onclick="window.open('https://www.google.com/maps/d/embed?mid=1yNgkzQd7BHtftIrIh3znIJ5s0fvS1DTl&ll=37.61115799638038%2C126.99648678993321&z=19', 'map')">  축제 안내 지도  </button>
+            <button id="mainButton" type="button" class="btn btn-outline-light btn-lg gMap" width="100%" height="100%" onclick="window.open('https://www.google.com/maps/d/embed?mid=1yNgkzQd7BHtftIrIh3znIJ5s0fvS1DTl&ll=37.61115799638038%2C126.99648678993321&z=19', 'map')">  축제 안내 지도  </button>
           </center>
         </div>
-        <div class="col-sm-4">
+        <div class="col-lg-4  col-sm-12">
           <center>
             <button id="mainButton" type="button" class="btn btn-outline-light btn-lg" onclick="window.open('/board/index', 'board')">아무말 게시판</button>
           </center>
         </div>
-          <div class="col-sm-2"></div>
+          <div class="col-lg-2"></div>
       </div>
   
   </div>
@@ -643,7 +650,7 @@
   
   <div id="artist_carousel">
     <br><br>
-    <h1 style="text-align: center;" id="lineup">FESTIVAL LINE-UP</h1><br><br>
+    <h1 class="lineupTitle" style="text-align: center;" id="lineup">FESTIVAL LINE-UP</h1><br><br>
       <div id="carouselLineupControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item">
@@ -787,9 +794,10 @@
                     <h4><li>청춘 부스</li>
                     <li>국민갓탤런트</li></h4>
                   </ul>
+                  <ul class="list-inline font_Arita">
                   <h4>[스포츠행사]</h4>
                   <h5>농구 / 풋살 / 피구</h5>
-                  
+                  </ul>
                   <hr><br>
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fa fa-times"></i>

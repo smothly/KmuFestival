@@ -11,12 +11,18 @@ label {
     color:white;
 }
 
+.board_cancel {
+    font-size: 16px;
+    color: rgba(400,400,400,0.8) !important;
+    margin: 0px 15px;
+}
+
 </style>
 
 <div class="back">
 <div class="container">
     <br><br>
-    <h1 class="title_color">새로운 글을 작성 중...</h1>
+    <h1 class="title_color">새 글 작성하기</h1>
     
     <form action="/board/create" method="POST">
     <div class="form-group">
@@ -37,8 +43,9 @@ label {
             <label for="comment">내용:</label>
             <textarea class="form-control" name="content" rows="10" id="comment" required></textarea>
         </div>
-    
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <a class="board_cancel" href="/board/index">취소</a>
+        <button type="submit" class="btn btn-primary">등록</button>
+        
     </form>
 </div>
 

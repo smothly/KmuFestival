@@ -7,11 +7,11 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 </head>
 
 <body>
@@ -22,29 +22,28 @@
   <%= yield %>
   <!--footer-->
   <footer class="footer-distributed" style="font-size: 1em; margin-top:0px" >
-      <p style="margin-bottom:;">
+      <p>
         <div class="row">
           
           <p>
-            <div class = "col-6">  
+            <div class = "col-lg-6 col-sm-12">  
               <div style="margin-right: 30px;"><%= image_tag "collabo.png", class: "likelionlogo" %></div>
               <!--<img src="assets/kmulion.png" align="left" width="105" height="105" hspace="15">-->
-              
               <div style="margin-left: 30px;">
                 <br>
                 02707 서울특별시 성북구 정릉로 77 국민대학교
                 <br>
-                Email : hyunji@likelion.org
-                <strong>
+                Email : kmu@likelion.org
+                <a>
                   <br>
                   COPYRIGHT© 2018 KOOKMIN-LIKELION.
                   <br>
                   ALL RIGHTS RESERVED.
                   <br>
-                </strong>
+                </a>
               </div>
             </div>
-            <div class="col-6" style="text-align:right">
+            <div class="footer-right col-lg-6 col-sm-12" style="text-align:right">
               <strong style="font-size:20px">CONTACT</strong>
               <br>
               <br>
