@@ -16,6 +16,8 @@
         .button_back {
             padding-top:0px !important;
             padding-bottom: 80px!important;
+            margin-right: 0px !important;
+            margin-left: 0px !important;
         }
         .guest {
             width:49.4% !important;
@@ -64,6 +66,7 @@
             font-size: 16px;
             margin:0px 12px;
         }
+        
     }
     
 /* Extra Small Devices, Phones */ 
@@ -84,6 +87,8 @@
         .button_back {
             padding-top:0px !important;
             padding-bottom: 80px!important;
+            margin-right: 0px !important;
+            margin-left: 0px !important;
         }
         .guest {
             width:49.4% !important;
@@ -155,6 +160,8 @@
         .button_back {
             padding-top:0px !important;
             padding-bottom: 80px!important;
+            margin-right: 0px !important;
+            margin-left: 0px !important;
         }
         .guest {
             width:49.4% !important;
