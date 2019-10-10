@@ -1,7 +1,7 @@
 # KmuFestival_2018
 ## 멋쟁이 사자처럼
 #### 국민대축제 - 2018. 5. 15 ~ 5. 18
-#### URL - http://festival.kookmin.ac.kr/
+#### URL - http://festival.kookmin.ac.kr/ - 현재 url 종료...
 <br>
 
 ## 서비스 내용
