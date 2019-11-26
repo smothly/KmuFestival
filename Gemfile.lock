@@ -162,7 +162,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
   jquery-rails
-  pg (~> 0.21)
+  pg
   rails (= 4.2.5)
   rails_12factor
   sass-rails (~> 5.0)
@@ -174,4 +174,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.15.4
+   1.17.3

@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'sqlite3', :group => :development
-gem 'pg', '~> 0.21', :group => :production
+gem 'pg', :group => :production
 gem 'rails_12factor', :group => :production
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
